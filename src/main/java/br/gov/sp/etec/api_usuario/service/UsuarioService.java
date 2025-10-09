@@ -32,7 +32,7 @@ public class UsuarioService {
 
     private boolean validarDados(UsuarioEntity usuarioEntity){
         try {
-            if(usuarioEntity.getNome() == null || usuarioEntity.getEmail()==null){
+            if(usuarioEntity.getNome() == null || usuarioEntity.getEmail()==null || usuarioEntity.getEmail().isEmpty()){
               throw new RuntimeException("Nome ou Email Invalido");
             }
             return true;
